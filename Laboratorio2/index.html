@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="index.js" type="text/javascript"></script><!--Para enlazar el HTML con un archivo Javascrip-->
+        <title>Laboratorio 2, Formularios</title>
+        <link rel="stylesheet" href="style.css"><!--Para enlazar el HTML con un archivo CSS-->
+
+    </head>
+
+    <body>
+
+        <section class="estilo">
+
+            <form action="" name="formulario"><!--Action para especificar donde mandar la informacion recogida, no quiero mandarla asi que vacio-->
+
+                <br/>
+
+                <h1>Create Account</h1><!--Titulo del formulario-->
+                
+                <!--Nombre-->
+                <div class="formulario">
+                    <h3>Nombre</h3>
+                    <div class="estiloForm">
+                        <input type="text" class="inputForm" id="nombre" value="" autocomplete="off">
+                        <p id="nombreError"></p>
+                    </div>
+                </div>
+
+                <br/>
+
+                <!--Email-->
+                <div class="formulario">
+                    <h3>Email</h3>
+                    <div class="estiloForm">
+                        <input type="email" class="inputForm" id="email" value="" autocomplete="off">
+                        <p id="emailError"></p>
+                    </div>
+                </div>
+
+                <br/>
+
+                <!--Clave-->
+                <div class="formulario">
+                    <h3>Clave</h3>
+                    <div class="estiloForm">
+                        <input type="password" class="inputForm" id="clave" value="">
+                        <p id="claveError"></p>
+                    </div>
+                </div>
+
+                <br/>
+
+                <!--Clave2-->
+                <div class="formulario">
+                    <h3>Confirme su clave</h3>
+                    <div class="estiloForm">
+                        <input type="password" class="inputForm" id="clave2" value="">
+                        <p id="clave2Error"></p>
+                    </div>
+                </div>
+
+                <br/>
+                
+                <!--Boton-->
+                <div class="formulario formularioBoton" id="grupoBoton">
+                    <input type="submit" value="Enviar" class="boton" id="boton">
+             </div>
+
+            </form>
+
+            <script>
+                document.getElementById("boton").addEventListener("click", function(event){
+                   event.preventDefault();
+                   validacion();
+                });
+            </script>
+
+        </section>
+
+    </body>
+
+</html>        
